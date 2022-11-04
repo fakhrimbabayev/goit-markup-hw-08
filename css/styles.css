@@ -194,20 +194,15 @@ img {
     margin-right: 40px;
 }
 
-
-.contact-icon-email {
+.contact-icon {
+    fill: currentColor;
     margin-right: 10px;
-    color: var(--light-grey);
-
+    transition-property: fill;
+    transition-duration: 350ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.contact-icon-phone {
-    margin-right: 10px;
-    color: var(--light-grey);
-
-
-}
 
 
 .header-contacts-link {
