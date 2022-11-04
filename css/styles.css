@@ -903,9 +903,6 @@ img {
     transition-property: opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: visibility;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }   
 
 .backdrop.is-hidden {
@@ -914,14 +911,26 @@ img {
     pointer-events: none;
 }
 
+.backdrop.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
 .modal {
     position: absolute;
-    width: 528px;
-    height: 581px;
+    min-width: 530px;
+    min-height: 580px;
     background-color: var(--white);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition-property: opacity;
+    transition-duration: 5250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-button {
     position: absolute;
