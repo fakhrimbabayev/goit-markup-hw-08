@@ -195,12 +195,14 @@ img {
 }
 
 .contact-icon {
-    fill: currentColor;
     margin-right: 10px;
+}
+
+.contact-icon {
+    fill: currentColor;
     transition-property: fill;
     transition-duration: 350ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 
@@ -226,6 +228,9 @@ img {
     fill: var(--aqua-blue);
 }
 
+.contact-icon:hover {
+    fill: var(--aqua-blue);
+}
 
 
 .hero {
