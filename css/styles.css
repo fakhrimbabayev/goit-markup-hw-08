@@ -254,7 +254,7 @@ img {
     width: 696px;
     font-weight: 900;
     font-size: 44px;
-    line-height: 1,36px;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -302,12 +302,11 @@ img {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
+    margin: 0;
     padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
     overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
     }
 
 
@@ -449,7 +448,7 @@ img {
 
 .team-members-title {
     margin-bottom: 50px;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     letter-spacing: 0.03em;
@@ -764,8 +763,51 @@ img {
     display: flex;
     flex-wrap: wrap;
     flex-basis: calc(100% - 60px / 2);
+    margin: 0;
+    padding: 0;
 }
 
+.portfolio-list-item {
+    display: flex;
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: var(--white);
+    border: 1px solid var(--border-grey);
+}
+
+
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
+
+.portfolio-list-item:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.portfolio-list-item:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+}
+
+
+.portfolio-link {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 .portfolio-card-thumb {
     position: relative;
@@ -779,24 +821,28 @@ img {
     width: 100%;
     height: 100%;
 
+
     transform: translateY(200%);
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    background-color: var(--aqua-blue);
+    background: var(--aqua-blue);
+
     padding: 63px 23px;
+}
+
+.portfolio-link:hover .portfolio-overlay-container,
+.portfolio-link:focus .portfolio-overlay-container {
+
+
+    transform: translateY(0);
 }
 
 .overlay-text {
     font-size: 18px;
     line-height: 156%;
     color: var(--white);
-}
-
-.portfolio-link:hover .portfolio-overlay-container,
-.portfolio-link:focus .portfolio-overlay-container {
-    transform: translateY(0);
 }
 
 
@@ -810,51 +856,8 @@ img {
 
 }
 
-/*
-.portfolio-border:hover .overlay,
-.portfolio-border:focus .overlay {
-    transform:translateY(0%)
-}*/
-
-.portfolio-list-item {
-    
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
-
-.portfolio-list-item-9 {
-    margin-left: 30px;
-}
-
-.portfolio-list-item-9:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-
-.portfolio-list-item:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 
-.portfolio-list-item:nth-child(3n) {
-    margin-right: 0px;
-}
-
-.portfolio-list-item:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
-}
-
-
-
-
-.portfolio-link {
-    display: block;
-}
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 
 .project-title {
@@ -863,7 +866,7 @@ img {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--nero-grey)
+    color: var(--nero-grey);
 }
 
 
