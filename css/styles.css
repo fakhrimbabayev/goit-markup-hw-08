@@ -951,9 +951,26 @@ img {
 
     transform: translate(-50%, -50%) scale(1);
     transition-property: opacity;
-    transition-duration: 5250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.call-back-title {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 41px;
+    margin-right: 39px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--nero-grey);
+}
+
+
 .modal-close-button {
     position: absolute;
     top: 8px;
@@ -969,7 +986,17 @@ img {
     align-items: center;
     cursor: pointer;
 }
+
 .modal-close-icon {
     width: 18px;
     height: 18px;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+    fill: var(--btn-blue);
 }
