@@ -809,7 +809,6 @@ img {
     color: var(--white);
     
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -1002,6 +1001,9 @@ img {
     margin-right: 8px;
 }
 
+
+
+/*backdrop*/
 
 .backdrop {
     position: fixed;
