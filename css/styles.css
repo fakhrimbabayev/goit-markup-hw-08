@@ -307,7 +307,7 @@ img {
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0);
-    }
+}
 
 
 .advantages-section {
@@ -661,12 +661,18 @@ img {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    color: var(--light-grey);
+    color: var(--light-grey); 
+    text-decoration: none;
 }
 
-.footer-address-maps,
 .footer-contact-mail,
 .footer-phone-number {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-address-maps {
     color: var(--white);
     font-style: normal;
     display: block;
@@ -750,7 +756,7 @@ img {
 
 }
 .footer-sm-text {
-    padding: 20px 0px 10px 0px;
+    margin-bottom: 20px;
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 14px;
@@ -759,13 +765,10 @@ img {
     text-transform: uppercase;
     color: var(--white);
 }
-.footer-sm-contact {
-}
-.footer-sm-label {
-}
 
 .footer-sm-input {
     width: 358px;
+    height: 50px;
     margin: 0;
     padding: 13px 16px;
     border-radius: 4px;
@@ -798,10 +801,12 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  
+    
+    width: 200px;
+    height: 50px;
+
     border: none;
     margin: 0;
-    padding: 8px 29px;
     border-radius: 4px;
   
     background: var(--aqua-blue);
@@ -815,7 +820,6 @@ img {
     letter-spacing: 0.06em;
   
     cursor: pointer;
-    min-height: 43px;
     margin-left: 12px;
 
     transition-property: background-color;
@@ -1058,13 +1062,22 @@ img {
     width: 30px;
     height: 30px;
     background-color: transparent;
-    border: 1px solid var(--modal-button-border);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+    fill: var(--btn-blue);
 }
 
 .modal-close-icon {
@@ -1075,12 +1088,12 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/*
 .modal-close-icon:hover,
 .modal-close-icon:focus {
     fill: var(--btn-blue);
 }
-
+*/
 .call-back-title {
     font-family: 'Roboto';
     font-weight: 700;
@@ -1093,25 +1106,6 @@ img {
 
     color: var(--nero-grey);
 }
-
-.contacts-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contacts-form-container {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-
-.contacts-form-field {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
 
 
 .contacts-form-label {
@@ -1132,7 +1126,20 @@ img {
 } 
 
 
+.contacts-form-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    top: 50%;
+    fill: var(--nero-grey);
 
+    transform: translateY(-50%);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .contacts-form-name {
     display: block;
@@ -1141,7 +1148,8 @@ img {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-
+    margin-bottom: 10px;
+    
     cursor: pointer;
 
     transition-property: border-color;
@@ -1154,20 +1162,6 @@ img {
     outline: none;
     border-color: var(--aqua-blue);
 }
-
-.contacts-form-icon {
-    position: absolute;
-    left: 12px;
-    bottom: 11px;
-    width: 18px;
-    height: 18px;
-
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
 
 .contacts-form-name:hover + .contacts-form-icon,
 .contacts-form-name:focus + .contacts-form-icon {
@@ -1184,6 +1178,7 @@ textarea {
     line-height: 1.17;
     letter-spacing: 0.01em;
     height: 120px;
+    margin-bottom: 20px;
 
     cursor: pointer;
 
@@ -1209,88 +1204,73 @@ textarea:focus {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox-container {
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-  
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    
-    margin-bottom: 30px;
-    margin-top: 20px;
-
-    color: var(--light-grey);
-}
 
 .contacts-checkbox-lbl {
+    position: relative;
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
-
+.contacts-form-checkbox {
+    outline: 2px solid var(--black);
+}
 
 .hidden-checkbox {
-    -webkit-appearance: none;
     position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
 }
 
-.contacts-checkbox-lbl .custom-checkbox-container {
-    display: flex;
-     background: var(--white);
-     width: 16px;
-     height: 15px;
-     position: relative;
-     margin-right: 8px;
+.use-box {
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-checkbox-lbl .checkbox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    max-width: 100%;
-    height: 100%;
-
-    background-color: var(--white);
-    border: 2px solid var(--nero-grey);
-    border-radius: 3px;
+.use-accept {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.contacts-form-checkbox:checked + .checkbox-icon .use-accept {
+    opacity: 1;
+}
 
-.checkbox {    
+.contacts-form-checkbox:checked + .checkbox-icon .use-box {
+    opacity: 0;
+}
+
+.checkbox-icon {    
     position: absolute;
+    top: 40%;
+    left: 12px;
+    transform: translateY(-40%);
+    cursor: pointer;
     width: 16px;
     height: 15px;
-    fill: var(--white);
 }
-
-/*
-.contacts-checkbox-lbl input:checked + .custom-checkbox-container .checkbox {
-    display: block;
-}*/
-
 
 
 .contacts-form-text {
+    user-select: none;
     font-size: 14px;
-    line-height: calc(24/14);
+    line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--light-grey);
+    margin-left: 35px;
+
 }
 
 
 .contacts-form-link {
-    font-size: 14px;
-    line-height: calc(24/12);
-    letter-spacing: 0.03em;
     color: var(--aqua-blue);
+    text-decoration-line: underline;
 
 }
 

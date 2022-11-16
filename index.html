@@ -499,13 +499,13 @@
                 </li>
                 <li class="footer-list-item">
                   <a
-                    class="footer-contact-mail link"
+                    class="footer-contact-mail"
                     href="mailto:info@example.com"
                     >info@example.com</a
                   >
                 </li>
                 <li class="footer-list-item">
-                  <a class="footer-phone-number link" href="tel:+380961111111">
+                  <a class="footer-phone-number" href="tel:+380961111111">
                     +38 096 111 11 11
                   </a>
                 </li>
@@ -571,17 +571,17 @@
           </div>
           <div class="footer-sm-follow">
             <p class="footer-sm-text">Подпишитесь на рассылку</p>
-            <div class="footer-sm-contact">
+            <form class="footer-sm-form">
               <label for="submit-mail" class="footer-sm-label"></label>
               <input class="footer-sm-input" type="email" name="submit-email" id="submit-email" placeholder="E-mail">
               <button class="footer-sm-button" type="submit">Подписаться
-                <div class="send-icon-container">
+                <span class="send-icon-container">
                   <svg class="send-icon">
                     <use href="./images/icons.svg#send-icon"></use>
                   </svg>
-                </div>
+                </span>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -595,59 +595,49 @@
         </button>
         <!--Contacts-Form-->
         <strong class="call-back-title">Оставьте свои данные, мы вам перезвоним</strong>
-        <div class="contacts-form-container">
         <form name="contacts-form" class="contacts-form">
-          <div class="contacts-form-box">
           <label for="name" class="contacts-form-field"> 
             <span class="contacts-form-label">Имя</span>
-              <input class="contacts-form-name" type="text" name="" id="name" autofocus required />
+            <span class="contacts-form-box">
+              <input class="contacts-form-name" type="text" name="name" id="name" autofocus required />
                <svg class="contacts-form-icon">
                 <use href="./images/icons.svg#person-form-icon"></use>
               </svg>
-            </div>
+            </span>
           </label>
-        </div>
-          <div class="contacts-form-container">
           <label for="phone" class="contacts-form-field"> 
-            <div class="contacts-form-box">
             <span class="contacts-form-label">Телефон</span>
-              <input class="contacts-form-name" type="tel" min="10" name="phone" id="phone" />
+            <span class="contacts-form-box">
+              <input class="contacts-form-name" type="tel" minlength="10" name="phone" id="phone" />
               <svg class="contacts-form-icon">
                 <use href="./images/icons.svg#phone-form-icon"></use>
               </svg>
-            </div>
+            </span>
           </label>
-          </div>
-          <div class="contacts-form-container">
           <label for="email" class="contacts-form-field"> 
-            <div class="contacts-form-box">
             <span class="contacts-form-label">Почта</span>
+            <span class="contacts-form-box">
               <input class="contacts-form-name" type="email" id="email" name="email"/>
               <svg class="contacts-form-icon">
                 <use href="./images/icons.svg#mail-form-icon"></use>
               </svg>
-            </div>
+            </span>
           </label>
-          </div>
           <label class="contacts-form-field" for="comments">
             <span class="contacts-form-label">Комментарий</span>
             <textarea class="contacts-form-comment" name="comments" rows="9" id="comments"  placeholder="Введите текст"></textarea>
           </label>
-          <div class="checkbox-container">
           <label class="contacts-checkbox-lbl">
-            <input class="hidden-checkbox" type="checkbox" id="accept"/>
-            <div class="custom-checkbox-container">
-              <svg class="checkbox">
-                <use href="./images/icons.svg#checkbox-icon"></use>
+            <input class="contacts-form-checkbox hidden-checkbox" type="checkbox" id="accept" required/>
+              <svg class="checkbox-icon">
+                <use class="use-accept" href="./images/icons.svg#checkbox-checked-icon"></use>
+                <use class="use-box" href="./images/icons.svg#checkbox-icon"></use>
               </svg>
-            </div>
-            <span class="contacts-form-text">Соглашаюсь с рассылкой и принимаю&nbsp;</span>
-            <a class="contacts-form-link" href="#">Условия договора</a>
+            <span class="contacts-form-text">Соглашаюсь с рассылкой и принимаю
+            <a class="contacts-form-link" href="#">Условия договора</a></span>
           </label>
-        </div>
           <button class="contacts-form-button" type="submit">Отправить</button>
         </form>
-        <!--</div>-->
       </div>
     </div>
     <script src="./js/modal.js"></script>
