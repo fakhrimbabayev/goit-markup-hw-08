@@ -1,0 +1,13 @@
+.page-header {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid var(--header-grey);
+}
+
+.page-header__container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
