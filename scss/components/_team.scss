@@ -21,35 +21,33 @@
 
 
 
-.team__img {
-    display: block;
-}
-
 
 .team__list {
     letter-spacing: 0.03em;
     display: flex;
     flex-wrap: wrap;
+
+    list-style: none;
 }
 
 .team__card {
     background-color: var(--white);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),0px 1px 1px rgba(0, 0, 0, 0.14),0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    &:not(:nth-child(4n)) {
+        margin-right: 30px;
+    }
 }
 
-.team__card:not(:nth-child(4n)) {
-    margin-right: 30px;
-}
-
-.team__wrapper {
+.team-wrapper {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 
 
-.team__employee {
+.team-wrapper__employee {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -59,7 +57,7 @@
     color: var(--nero-grey);
 }
 
-.team__profession {
+.team-wrapper__profession {
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.19;
