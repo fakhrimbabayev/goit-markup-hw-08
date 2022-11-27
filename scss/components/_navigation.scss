@@ -5,6 +5,7 @@
 }
 
 .navigation__list {
+    @extend %list;
     display: flex;
     margin-left: 93px;
 }

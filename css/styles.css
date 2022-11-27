@@ -139,7 +139,7 @@ img {
 
 
 
-.link {
+/* .link {
     position: relative;
     text-decoration: none;
     transition-property: color;
@@ -151,13 +151,13 @@ img {
 .link:focus {
     color: var(--aqua-blue);
     fill: var(--aqua-blue);
-}
+} */
 
 
 
-.list {
+/* .list {
     list-style: none;
-}
+} */
 
 
 /* .logo {

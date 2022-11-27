@@ -1,0 +1,19 @@
+%list {
+    list-style: none;
+}
+
+%link {
+    & {
+        position: relative;
+        text-decoration: none;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+     
+    &:hover,
+    &:focus {
+        color: var(--aqua-blue);
+        fill: var(--aqua-blue);
+    }
+}

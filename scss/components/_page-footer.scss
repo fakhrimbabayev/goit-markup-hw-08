@@ -11,7 +11,7 @@
 
 
 .page-footer__list {
-    list-style: none;
+    @extend %list;
 }
 
 
@@ -20,6 +20,7 @@
 }
 
 .page-footer__maps {
+    @extend %link;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -33,6 +34,17 @@
     color: var(--light-grey);
     text-decoration: none;
 
+    &:hover,
+    &:focus {
+    color: var(--aqua-blue);
+    }
+
+    & {
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 }
 
 .page-footer__phone {
@@ -41,14 +53,19 @@
     letter-spacing: 0.03em;
     color: var(--light-grey); 
     text-decoration: none;
+    
+    &:hover,
+    &:focus {
+    color: var(--aqua-blue);
+    }
+
+    & {
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
-.page-footer__mail,
-.page-footer__phone {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .page-footer__maps {
     color: var(--white);
@@ -63,15 +80,6 @@
 }
 
 
-.page-footer__mail:hover,
-.page-footer__mail:focus {
-    color: var(--aqua-blue);
-}
-
-.page-footer__phone:hover,
-.page-footer__phone:focus {
-    color: var(--aqua-blue);
-}
 
 
 .footer-newsletter {
