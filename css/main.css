@@ -27,7 +27,7 @@
   clip: rect(0 0 0 0);
 }
 
-.projects-list, .portfolio-nav__list, .page-footer__list, .footer-socials__list, .socials-list, .services__list, .advantages__list, .contacts__list, .navigation__list {
+.projects-list, .portfolio-nav__list, .page-footer__list, .partners__list, .footer-socials__list, .socials-list, .services__list, .advantages__list, .contacts__list, .navigation__list {
   list-style: none;
 }
 
@@ -645,6 +645,15 @@ ol {
   fill: var(--white);
 }
 
+.partners__title {
+  color: var(--nero-grey);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .partners__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -654,15 +663,6 @@ ol {
           justify-content: space-between;
   margin: 0;
   padding: 0;
-}
-
-.partners__title {
-  color: var(--nero-grey);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 .partners__item {
