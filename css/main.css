@@ -683,7 +683,8 @@ ol {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.partners__icon:hover, .partners__icon:focus {
+.partners__link:hover .partners__icon, .partners__link:focus .partners__icon {
+  border-color: var(--aqua-blue);
   fill: var(--aqua-blue);
 }
 
@@ -701,8 +702,6 @@ ol {
   height: 90px;
   border: 1px solid var(--border-second-color);
   border-radius: 4px;
-}
-.partners__link {
   -webkit-transition-property: border-color;
   transition-property: border-color;
   -webkit-transition-duration: 250ms;
@@ -712,10 +711,6 @@ ol {
 }
 .partners__link:hover, .partners__link:focus {
   border-color: var(--aqua-blue);
-}
-
-.partners__link:hover .partner-icon,
-.partners__link:focus .partner-icon {
   fill: var(--aqua-blue);
 }
 
@@ -1045,6 +1040,9 @@ ol {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.contacts-form-box__name:hover + .contacts-form-box__icon {
+  fill: var(--aqua-blue);
+}
 
 .contacts-form-box__name {
   display: block;
@@ -1062,16 +1060,9 @@ ol {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.contacts-form-box__name:hover,
-.contacts-form-box__name:focus {
+.contacts-form-box__name:hover, .contacts-form-box__name:focus {
   outline: none;
   border-color: var(--aqua-blue);
-}
-
-.contacts-form-box__name:hover + .contacts-form-icon,
-.contacts-form-box__name:focus + .contacts-form-icon {
-  fill: var(--aqua-blue);
 }
 
 textarea {
