@@ -2,18 +2,8 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19;
+    line-height: calc(31 / 26);
     letter-spacing: 0.03em;   
-    color: var(--aqua-blue);
-    text-decoration: none;
-}
-
-.logo-footer {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
     color: var(--aqua-blue);
     text-decoration: none;
 }
@@ -22,16 +12,26 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19;
+    line-height: calc(31 / 26);
     letter-spacing: 0.03em;
     color: var(--black);
+}
+
+.logo-footer {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;   
+    color: var(--aqua-blue);
+    text-decoration: none;
 }
 
 .logo-part-footer {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19;
+    line-height: calc(31 / 26);
     letter-spacing: 0.03em;
     color: var(--white)
 }
