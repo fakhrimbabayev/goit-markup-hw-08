@@ -385,7 +385,7 @@ ol {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 2000px) {
   .team__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
