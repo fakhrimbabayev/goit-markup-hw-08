@@ -27,7 +27,7 @@
   clip: rect(0 0 0 0);
 }
 
-.mobile-menu__socials, .mobile-menu__contacts, .mobile-menu__nav, .page-footer__list, .footer-socials__list, .socials-list, .contacts-list, .navigation__list, .services__list, .advantages__list, .projects-list, .portfolio-nav__list, .partners__list {
+.mobile-menu__socials, .mobile-menu__contacts, .mobile-menu__nav, .page-footer__list, .footer-socials__list, .socials-list, .contacts-list, .navigation__list, .services__list, .advantages__list, .team__list, .projects-list, .portfolio-nav__list, .partners__list {
   list-style: none;
 }
 
@@ -370,9 +370,12 @@ ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  list-style: none;
 }
 
 .team__card {
@@ -1356,6 +1359,11 @@ textarea:focus {
   fill: var(--white);
 }
 
+@media screen and (max-width: 767px) {
+  .footer-socials {
+    margin-top: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-socials {
     margin-bottom: 0;
@@ -1368,31 +1376,6 @@ textarea:focus {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--dark-grey);
-}
-
-@media screen and (min-width: 768px) {
-  .page-footer__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .page-footer__wrapper {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-}
-.address-wrapper {
-  margin-bottom: 60px;
 }
 
 .page-footer__list {
@@ -1414,6 +1397,10 @@ textarea:focus {
 
 .address {
   font-style: inherit;
+}
+
+.address-wrapper {
+  text-align: center;
 }
 
 .page-footer__maps {
@@ -1471,21 +1458,36 @@ textarea:focus {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
-  .address-wrapper {
-    text-align: center;
-  }
-}
 @media screen and (min-width: 768px) {
+  .page-footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .address-wrapper {
-    text-align: center;
     margin-right: 165px;
   }
 }
 @media screen and (min-width: 1200px) {
+  .page-footer__wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
   .address-wrapper {
     margin-right: 70px;
+    text-align: left;
     margin-bottom: 0;
+  }
+  .page-footer__item:not(:first-child) {
+    padding-right: 90px;
   }
   .page-footer__item:not(:last-child) {
     margin-bottom: 9px;
@@ -1640,6 +1642,9 @@ textarea:focus {
 }
 
 @media screen and (min-width: 768px) {
+  .footer-newsletter {
+    margin-top: 60px;
+  }
   .footer-newsletter__input {
     width: 450px;
   }
@@ -1662,6 +1667,7 @@ textarea:focus {
   }
   .footer-newsletter__input {
     margin-bottom: 0px;
+    margin-right: 12px;
     width: 358px;
   }
 }

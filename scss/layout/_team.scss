@@ -23,11 +23,12 @@
 
 
 .team__list {
+    @extend %list;
     letter-spacing: 0.03em;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 
-    list-style: none;
 }
 
 .team__card {
