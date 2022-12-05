@@ -26,8 +26,8 @@
 
 .modal-close {
     position: absolute;
-    min-width: 530px;
-    min-height: 580px;
+    width: 530px;
+    height: 580px;
     background-color: var(--white);
     top: 50%;
     left: 50%;
@@ -40,6 +40,11 @@
     transition-property: opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-device-width: 200px) and (max-device-width: 1199px) {
+            width: 450px;
+            height: 609px;
+    }
 }
 
 
@@ -240,16 +245,31 @@ textarea:focus {
     cursor: pointer;
     width: 16px;
     height: 15px;
+
+    @media screen and (min-device-width: 200px) and (max-device-width: 1199px) {
+        left: 2px;
+    }
+
 }
 
 
 .contacts-form-text {
+    @media screen and (min-width: 1200px) {
     user-select: none;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--light-grey);
     margin-left: 35px;
+    }
+    @media screen and (min-device-width: 200px) and (max-device-width: 1199px) {
+        user-select: none;
+        font-size: 12px;
+        line-height: 1.61;
+        letter-spacing: 0.03em;
+        color: var(--light-grey);
+        padding-left: 24px;
+    }
 
 }
 

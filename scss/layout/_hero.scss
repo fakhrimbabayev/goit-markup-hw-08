@@ -5,11 +5,52 @@
     max-width: 1600px;
     height: 600px;
     background-color: var(--dark-grey);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg.jpeg.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg480@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
+
+    @media (min-device-pixel-ratio: 2) and (max-width: 767px),
+    (min-resolution: 192dpi) and (max-width: 767px),
+    (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg480@2x.jpg");
+    max-width: 480px;
+    max-height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    margin: auto;
+}
+
+    @media screen and (min-width: 768px) {   
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg768@1x.jpg")
+    }
+
+    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+    (min-resolution: 192dpi) and (min-width: 768px),
+    (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg768@2x.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 768px; 
+    margin: auto;   
+}
+
+    @media screen and (min-width: 1200px) {   
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg1200@1x.jpg")
+    }
+
+    @media (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    (min-resolution: 192dpi) and (min-width: 1200px),
+    (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg1200@2x.jpg");
+}
+
 } 
 
 
@@ -26,6 +67,7 @@
     text-transform: uppercase;
     color: var(--white);
 }
+
 
 .hero__button {
     margin: 0 auto;
@@ -52,6 +94,24 @@
     background-color: var(--btn-blue);
     color: var(--white);
 }
+}
+
+@media screen  and(max-width: 1199px) {
+
+    .hero__title {
+    font-size: 26px;
+    line-height: 1.61;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+
+    max-width: 360px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;   
+    }
 
 
 }
