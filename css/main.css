@@ -197,13 +197,12 @@ ol {
   }
 }
 .portfolio-nav__list {
-  margin-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-bottom: 25px;
+}
+
+.portfolio-nav__item {
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
 .portfolio-nav__item:not(:last-child) {
@@ -237,6 +236,17 @@ ol {
   color: var(--dark-white);
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
 .projects-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,6 +305,25 @@ ol {
   overflow: hidden;
 }
 
+@media screen and (max-width: 767px) {
+  .projects-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
+  .projects-list__item {
+    width: 450px;
+    height: 404px;
+  }
+}
 .overlay-container {
   position: absolute;
   top: 0;
@@ -1218,10 +1247,16 @@ textarea:focus {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
