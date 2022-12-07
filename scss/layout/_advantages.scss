@@ -63,11 +63,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin: -15px;
+      gap: 30px;
     }
     .advantages__item {
       max-width: 354px;
-      margin: 15px;
     }
     .advantages__title {
       text-align: start;

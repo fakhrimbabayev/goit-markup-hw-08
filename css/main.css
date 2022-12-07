@@ -130,13 +130,12 @@ ol {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: -15px;
+  gap: 30px;
 }
 
 .partners__item {
   width: 210px;
   height: 92px;
-  margin: 15px;
 }
 
 .partners__link {
@@ -521,11 +520,10 @@ ol {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: -15px;
+    gap: 30px;
   }
   .advantages__item {
     max-width: 354px;
-    margin: 15px;
   }
   .advantages__title {
     text-align: start;
@@ -633,11 +631,11 @@ ol {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   margin: auto;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  max-height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: var(--dark-grey);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/bg480@1x.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg480@1x.jpg");
@@ -650,47 +648,44 @@ ol {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/bg480@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg480@2x.jpg");
-    max-width: 480px;
-    max-height: 400px;
-    padding-top: 118px;
-    padding-bottom: 118px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    margin: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/bg768@1x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg768@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 768px;
+    max-height: 400px;
+    margin: auto;
   }
 }
 @media (min-device-pixel-ratio: 2) and (min-width: 768px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/bg768@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg768@2x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 768px;
-    margin: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/bg1200@1x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg1200@1x.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1600px;
+    max-height: 600px;
+    margin: auto;
   }
 }
 @media (min-device-pixel-ratio: 2) and (min-width: 1200px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/bg1200@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg1200@2x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 1600px;
-    margin: auto;
   }
 }
 
@@ -1422,6 +1417,11 @@ textarea:focus {
           justify-content: center;
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-socials {
+    margin-bottom: 0px;
+  }
 }
 
 .footer-socials__title {
