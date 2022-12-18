@@ -381,6 +381,13 @@ ol {
   border-right: 1px solid var(--border-grey);
   border-bottom: 1px solid var(--border-grey);
 }
+@media screen and (min-device-width: 768px) and (max-device-width: 1199px) {
+  .projects-border {
+    max-width: 354px;
+    max-height: 146px;
+    border-bottom: none;
+  }
+}
 
 .projects-border__title {
   margin-bottom: 4px;
