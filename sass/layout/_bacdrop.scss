@@ -41,7 +41,7 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) {
         width: 528px;
         height: 581px;
     }
@@ -246,7 +246,7 @@ textarea:focus {
     width: 16px;
     height: 15px;
 
-    @media screen and (min-device-width: 200px) and (max-device-width: 1199px) {
+    @media screen and (max-width: 1199px) {
         left: 2px;
     }
 
@@ -254,15 +254,7 @@ textarea:focus {
 
 
 .contacts-form-text {
-    @media screen and (min-width: 1200px) {
-    user-select: none;
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
-    color: var(--light-grey);
-    margin-left: 35px;
-    }
-    @media screen and (min-device-width: 200px) and (max-device-width: 1199px) {
+    @media screen and (max-width: 1199px) {
         user-select: none;
         font-size: 12px;
         line-height: 1.61;
@@ -270,6 +262,15 @@ textarea:focus {
         color: var(--light-grey);
         padding-left: 24px;
     }
+    @media screen and (min-width: 1200px) {
+        user-select: none;
+        font-size: 14px;
+        line-height: calc(24 / 14);
+        letter-spacing: 0.03em;
+        color: var(--light-grey);
+        margin-left: 35px;
+        }
+
 
 }
 
