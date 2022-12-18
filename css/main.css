@@ -1836,7 +1836,7 @@ textarea:focus {
     margin-top: 60px;
   }
   .footer-newsletter__input {
-    width: 450px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
