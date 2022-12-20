@@ -824,7 +824,7 @@ ol {
 
 .modal-close {
   position: absolute;
-  width: 450px;
+  width: calc(100% - 15px);
   height: 609px;
   background-color: var(--white);
   top: 50%;
@@ -841,6 +841,12 @@ ol {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .modal-close {
+    width: 450px;
+    height: 609px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-close {
