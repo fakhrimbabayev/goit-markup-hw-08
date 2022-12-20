@@ -1,3 +1,5 @@
+
+
 .portfolio-nav__list {
     @extend %list;
     margin-bottom: 25px;
@@ -92,15 +94,15 @@
 
 @media screen and (max-width: 767px) {
     .projects-list__item {
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
         max-width: 450px;
         
         &:not(:last-child) {
             margin-bottom: 30px;
         }
-    }
-
-    .projects__img {
-        max-width: 450px;
     }
 }
 
@@ -120,9 +122,6 @@
         margin: 15px;
     }
 
-    .projects__img {
-        max-width: 354px;
-    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -131,9 +130,6 @@
         flex-basis: calc((100% - 3 * 30px) / 3);
     }
 
-    .projects__img {
-        max-width: 370px;
-    }
 }
 
 
